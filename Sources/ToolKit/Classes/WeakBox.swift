@@ -1,6 +1,6 @@
 //
 //  WeakBox.swift
-//  BackendKit
+//  ToolKit
 //
 //  Created by Alexander Kolov on 2018-07-16.
 //  Copyright © 2018 Alexander Kolov. All rights reserved.
