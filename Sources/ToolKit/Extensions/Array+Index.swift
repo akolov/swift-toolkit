@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Array where Element : Collection, Element.Index == Int {
+extension Array where Element: Collection, Element.Index == Int {
 
   public func firstIndexPath(where predicate: (Element.Iterator.Element) -> Bool) -> IndexPath? {
     for (i, row) in self.enumerated() {
