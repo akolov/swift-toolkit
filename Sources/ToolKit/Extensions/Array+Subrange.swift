@@ -8,6 +8,16 @@
 
 extension Array {
 
+  public func subrange(in range: ClosedRange<Index>) -> ArraySlice<Element> {
+    guard indices.contains(range.lowerBound), let last = indices.last else {
+      return self[0..<0]
+    }
+
+    let lower = range.lowerBound
+    let upper = Swift.min(range.upperBound, last)
+    return self[lower...upper]
+  }
+
   public func subrange(in range: Range<Index>) -> ArraySlice<Element> {
     guard indices.contains(range.lowerBound) else {
       return self[0..<0]
