@@ -8,11 +8,6 @@
 
 public class Cached<T> {
 
-  public init(getter: @escaping () -> T, setter: ((T) -> Void)? = nil) {
-    self.getter = getter
-    self.setter = setter
-  }
-
   // MARK: Properties
 
   public var value: T {
@@ -34,5 +29,18 @@ public class Cached<T> {
   private var cached: T?
   private var getter: () -> T
   private var setter: ((T) -> Void)?
+
+  // MARK: Initialization
+
+  public init(getter: @escaping () -> T, setter: ((T) -> Void)? = nil) {
+    self.getter = getter
+    self.setter = setter
+  }
+
+  // MARK: Public
+
+  public func invalidate() {
+    cached = nil
+  }
 
 }
