@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "swift-toolkit",
+  name: "ToolKit",
   platforms: [
     .macOS(.v10_13), .iOS(.v12), .tvOS(.v12), .watchOS(.v5)
   ],
