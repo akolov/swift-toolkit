@@ -17,7 +17,10 @@ let package = Package(
   targets: [
     .target(
       name: "ToolKit",
-      dependencies: []
+      dependencies: [],
+      swiftSettings: [
+        .define("APPLICATION_EXTENSION_API_ONLY=YES"),
+      ]
     )
   ]
 )
