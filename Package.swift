@@ -6,16 +6,18 @@ import PackageDescription
 let package = Package(
   name: "ToolKit",
   platforms: [
-    .macOS(.v10_13), .iOS(.v12), .tvOS(.v12), .watchOS(.v5)
+    .iOS(.v14), .macOS(.v10_15)
   ],
   products: [
     .library(
       name: "ToolKit",
-      targets: ["ToolKit"]),
+      targets: ["ToolKit"]
+    ),
   ],
   targets: [
     .target(
       name: "ToolKit",
-      dependencies: [])
+      dependencies: []
+    )
   ]
 )
